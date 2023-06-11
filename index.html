@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tesla UI clone</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="relative">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <div class="flex justify-between font-bold pt-5 mb-3">
+      <div class="flex ml-8">
+        <svg class="w-32 cursor-pointer hover:scale-50 duration-300" viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z" fill="currentColor"></path>
+        </svg>
+      </div>
+      <div class="grow hidden lg:inline">
+        <ul class="flex space-x-2 flex-row justify-center text-tesla-dark text-sm cursor-pointer">
+          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Model S</li>
+          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Model 3</li>
+          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Model X</li>
+          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Model Y</li>
+          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Solar Roof</li>
+          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Solar Panels</li>
+          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Powerwall</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="flex flex-row text-sm space-x-4 ml-5">
+          <li class="cursor-pointer hover:rounded-full hover:bg-blue-400 py-1 px-3 rounded-3xl">Shop</li>
+          <li class="cursor-pointer hover:rounded-full hover:bg-blue-400 py-1 px-3 rounded-3xl">Account</li>
+          <li class="cursor-pointer hover:rounded-full hover:bg-blue-400 py-1 px-3 rounded-3xl">Menu</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Video Background -->
+  <div id="video-background" class="fixed top-0 left-0 w-full h-full z-0 ">
+    <video class="w-full h-full object-cover" autoplay loop muted>
+      <source src="background.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <!-- Content -->
+  <div class="relative">
+    <div class="bg-cover bg-center h-screen landing-image">
+      <div class="flex flex-col items-center justify-center h-full text-white">
+        <h1 class="text-5xl font-bold mb-8">Welcome to Tesla</h1>
+        <p class="text-2xl mb-32">Experience the future of driving</p>
+        <a href="#" class="mt-16 px-16 py-4 bg-blue-600 text-white rounded hover:bg-white hover:text-black transition duration-200">Demo Drive</a>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
