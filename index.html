@@ -1,58 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tesla UI clone</title>
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
-</head>
-<body class="relative">
-  <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-    <div class="flex justify-between font-bold pt-5 mb-3">
-      <div class="flex ml-8">
-        <svg class="w-32 cursor-pointer hover:scale-50 duration-300" viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z" fill="currentColor"></path>
-        </svg>
-      </div>
-      <div class="grow hidden lg:inline">
-        <ul class="flex space-x-2 flex-row justify-center text-tesla-dark text-sm cursor-pointer">
-          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Model S</li>
-          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Model 3</li>
-          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Model X</li>
-          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Model Y</li>
-          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Solar Roof</li>
-          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Solar Panels</li>
-          <li class="py-1 px-3 hover:rounded-full hover:bg-blue-400 rounded-3xl">Powerwall</li>
-        </ul>
-      </div>
-      <div>
-        <ul class="flex flex-row text-sm space-x-4 ml-5">
-          <li class="cursor-pointer hover:rounded-full hover:bg-blue-400 py-1 px-3 rounded-3xl">Shop</li>
-          <li class="cursor-pointer hover:rounded-full hover:bg-blue-400 py-1 px-3 rounded-3xl">Account</li>
-          <li class="cursor-pointer hover:rounded-full hover:bg-blue-400 py-1 px-3 rounded-3xl">Menu</li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <!-- Video Background -->
-  <div id="video-background" class="fixed top-0 left-0 w-full h-full z-0 ">
-    <video class="w-full h-full object-cover" autoplay loop muted>
-      <source src="background.mp4" type="video/mp4" />
-    </video>
-  </div>
-  <!-- Content -->
-  <div class="relative">
-    <div class="bg-cover bg-center h-screen landing-image">
-      <div class="flex flex-col items-center justify-center h-full text-white">
-        <h1 class="text-5xl font-bold mb-8">Welcome to Tesla</h1>
-        <p class="text-2xl mb-32">Experience the future of driving</p>
-        <a href="#" class="mt-16 px-16 py-4 bg-blue-600 text-white rounded hover:bg-white hover:text-black transition duration-200">Demo Drive</a>
-      </div>
-    </div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesla UI clone</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-  
-</body>
+  <body class="relative">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+      <div class="flex justify-between items-center px-8 py-5">
+        <div class="flex items-center">
+          <svg
+            class="w-32 cursor-pointer hover:scale-50 duration-300"
+            viewBox="0 0 342 35"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <nav
+            class="hidden lg:flex items-center ml-8 space-x-4 text-tesla-dark text-sm"
+          >
+            <a
+              href="#"
+              class="hover:rounded-full hover:bg-blue-400 py-1 px-3 rounded-3xl"
+              >Model S</a
+            >
+            <a
+              href="#"
+              class="hover:rounded-full hover:bg-blue-400 py-1 px-3 rounded-3xl"
+              >Model 3</a
+            >
+            <a
+              href="#"
+              class="hover:rounded-full hover:bg-blue-400 py-1 px-3 rounded-3xl"
+              >Model X</a
+            >
+          </nav>
+        </div>
+        <div class="hidden lg:flex items-center space-x-6">
+          <a href="#" class="text-tesla-dark hover:text-blue-500">Shop</a>
+          <a href="#" class="text-tesla-dark hover:text-blue-500"
+            >Tesla Account</a
+          >
+        </div>
+        <div class="lg:hidden">
+          <svg
+            class="w-8 h-8 cursor-pointer hover:scale-110 duration-300"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="mt-24 px-8">
+        <section id="main_section" class="h-screen bg-gray-100">
+            <div class="items-center justify-center mb-48 text-black">
+              <div id="image-slider" class="relative h-screen min-h-screen">
+                <div class="">
+                  <div class="absolute inset-0">
+                    <div class="flex flex-col items-center justify-center h-full">
+                      <h1 class="text-5xl font-bold mb-8">Welcome to Tesla</h1>
+                      <p class="text-2xl">Experience the future of driving</p>
+                      <a href="#" class="mt-10 px-16 py-4 bg-blue-600 text-white rounded hover:bg-white hover:text-black hover:border-black transition duration-200">
+                        Demo Drive
+                      </a>
+                    </div>
+                    <img class="object-cover rounded-xl shadow-md absolute top-0 left-0 transition-opacity duration-500 opacity-100 w-full h-full" src="https://tesla-cdn.thron.com/delivery/public/image/tesla/e90a341e-f9ca-4aa1-8eab-94afea118786/bvlatuR/std/2880x1800/M3-Homepage-D" alt="Tesla Model S" />
+                    <img class="object-cover rounded-xl shadow-md absolute top-0 left-0 transition-opacity duration-500 opacity-0 w-full h-full" src="https://tesla-cdn.thron.com/delivery/public/image/tesla/8e2df1b9-a4bf-4eb9-beec-2cf5cc77fca0/bvlatuR/std/2880x2400/Desktop-ModelY?quality=70" alt="Image 2" />
+                    <img class="object-cover rounded-xl shadow-md absolute top-0 left-0 transition-opacity duration-500 opacity-0 w-full h-full" src="https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Model-Y-Main-Hero-Desktop-Global" alt="Image 3" />
+                    <!-- Add more images as needed -->
+                  </div>
+                  <button id="previous-button" class="absolute mt-64 transform -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button id="next-button" class="absolute mt-64 right-2 transform -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+      <section class="flex justify-between items-center mt-10">
+        <div class="w-1/2">
+          <h1 class="text-6xl font-semibold leading-tight mb-4">Model S</h1>
+          <p class="text-lg leading-relaxed mb-8">
+            Order Online for Touchless Delivery
+          </p>
+          <button
+            class="bg-black hover:bg-gray-900 text-white font-semibold rounded-xl py-3 px-8"
+          >
+            Custom Order
+          </button>
+          <button
+            class="bg-white hover:bg-gray-100 text-black font-semibold border border-black rounded-xl py-3 px-8 ml-4"
+          >
+            Existing Inventory
+          </button>
+        </div>
+        <div class="w-1/2">
+          <img
+            class="w-96 h-56 object-cover rounded-xl shadow-md"
+            src="https://tesla-cdn.thron.com/delivery/public/image/tesla/e90a341e-f9ca-4aa1-8eab-94afea118786/bvlatuR/std/2880x1800/M3-Homepage-D"
+            alt="Tesla Model S"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-tesla-dark text-gray-500 text-sm py-10 px-8 mt-32 bg-blue-700"
+    >
+      <div class="flex justify-between items-center">
+        <div>
+          <svg
+            class="w-32"
+            viewBox="0 0 342 35"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <a href="#" class="text-gray-500 hover:text-white">Privacy</a>
+          <a href="#" class="text-gray-500 hover:text-white ml-4">Legal</a>
+          <a href="#" class="text-gray-500 hover:text-white ml-4">Contact</a>
+          <a href="#" class="text-gray-500 hover:text-white ml-4">Careers</a>
+          <a href="#" class="text-gray-500 hover:text-white ml-4"
+            >Get Newsletter</a
+          >
+          <a href="#" class="text-gray-500 hover:text-white ml-4">News</a>
+          <a href="#" class="text-gray-500 hover:text-white ml-4">Forums</a>
+          <a href="#" class="text-gray-500 hover:text-white ml-4">Locations</a>
+        </div>
+        <div>
+          <a href="#" class="text-gray-500 hover:text-white">Tesla © 2023</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const images = Array.from(document.querySelectorAll("#image-slider img"));
+      let currentImageIndex = 0;
+      let timerId = null;
+
+      function showImage(index) {
+        images.forEach((img, i) => {
+          img.style.opacity = i === index ? "1" : "0";
+        });
+      }
+
+      function startSlideShow() {
+        stopSlideShow();
+        timerId = setInterval(() => {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          showImage(currentImageIndex);
+        }, 4000);
+      }
+
+      function stopSlideShow() {
+        clearInterval(timerId);
+      }
+
+      const previousButton = document.querySelector("#previous-button");
+      previousButton.addEventListener("click", () => {
+        currentImageIndex =
+          (currentImageIndex - 1 + images.length) % images.length;
+        showImage(currentImageIndex);
+      });
+
+      const nextButton = document.querySelector("#next-button");
+      nextButton.addEventListener("click", () => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        showImage(currentImageIndex);
+      });
+
+      startSlideShow();
+    </script>
+  </body>
 </html>
