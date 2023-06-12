@@ -1,25 +1,39 @@
-const images = document.querySelectorAll("#image-slider img");
-const previousButton = document.getElementById("previous-button");
+const cardContainer = document.getElementById("card-container");
+const previousBtn = document.getElementById("previous-btn");
+const nextBtn = document.getElementById("next-btn");
+const cards = cardContainer.getElementsByClassName("card");
 let currentIndex = 0;
 
-function showImage(index) {
-  images.forEach((image, i) => {
+function showCard(index) {
+  for (let i = 0; i < cards.length; i++) {
     if (i === index) {
-      image.style.opacity = 1;
+      cards[i].style.display = "block";
     } else {
-      image.style.opacity = 0;
+      cards[i].style.display = "none";
     }
-  });
+  }
 }
 
-function previousImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  showImage(currentIndex);
+function handlePrevious() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = cards.length - 1;
+  }
+  showCard(currentIndex);
 }
 
-previousButton.addEventListener("click", previousImage);
+function handleNext() {
+  if (currentIndex < cards.length - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  showCard(currentIndex);
+}
 
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage(currentIndex);
-}, 3000);
+previousBtn.addEventListener("click", handlePrevious);
+nextBtn.addEventListener("click", handleNext);
+
+// Show the initial card
+showCard(currentIndex);
